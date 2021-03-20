@@ -1,19 +1,4 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db_name ="sidehustle";
-
-
-$dbc = @mysqli_connect($servername ,$username, $password, $db_name);
-
-if(!$dbc){
-         die('could not connect to mysql' . 
-        mysqli_connect_error());
-}else{
-    echo '';
-}
-
 $active_group ='default';
 $query_builder =TRUE;
 $db['default'] =  array(
@@ -40,4 +25,23 @@ $db['default'] =  array(
 
 
 );
+
+
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name ="sidehustle";
+
+
+$dbc = @mysqli_connect($servername ,$username, $password, $db_name);
+
+if(!$dbc){
+         die('could not connect to mysql' . 
+        mysqli_connect_error());
+}else{
+    echo '';
+}
+
+
 ?>
