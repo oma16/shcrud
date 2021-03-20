@@ -1,30 +1,5 @@
 <?php
-$active_group ='default';
-$query_builder =TRUE;
-$db['default'] =  array(
-'dsn' => '';
-'hostname' => 'eu-cdbr-west-03.cleardb.net';
-'username' => 'b7288f43bb52cf';
-'password' => '806062fb';
-'database' => 'heroku_c85d074a1a36290';
-'dbdriver' => 'mysqli';
-'dbprefix' => '';
-'pconnect' =>FALSE;
-'db_debug' => (ENVIRONMENT !== 'production');
-'cache_on' => FALSE;
-'cachedir' => '';
-'char_set' => 'utf8';
-'dbcollat' => 'utf8_general_ci';
-'swap_pre' => '';
-'encrypt' => FALSE;
-'compress' => FALSE;
-'stricton' => FALSE;
-'failover' => array();
-'save_queries' => TRUE;
 
-
-
-);
 
 
 
@@ -42,6 +17,16 @@ if(!$dbc){
 }else{
     echo '';
 }
-
+'mysqli'  => [
+    'driver'    => 'mysqli',
+    'host'      => env('DB_HOST', 'eu-cdbr-west-03.cleardb.net'),
+    'database'  => env('DB_DATABASE', 'heroku_c85d074a1a36290'),
+    'username'  => env('DB_USERNAME', 'b7288f43bb52cf'),
+    'password'  => env('DB_PASSWORD', '806062fb'),
+    'charset'   => 'utf8',
+    'collation' => 'utf8_general_ci',
+    'prefix'    => '',
+    'strict'    => false,
+],
 
 ?>
